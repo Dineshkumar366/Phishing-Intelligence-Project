@@ -1,0 +1,123 @@
+1. Networking Fundamentals
+
+1. What is the OSI Model?
+
+The OSI model has seven layers:
+1.
+Physical – Transfers bits through cables or wireless signals.
+2.
+Data Link – Handles frames and MAC addresses.
+3.
+Network – Handles IP addressing and routing.
+4.
+Transport – Provides TCP and UDP communication.
+5.
+Session – Manages communication sessions.
+6.
+Presentation – Handles data formats, encryption and compression.
+7.
+Application – Provides services such as HTTP, DNS and SMTP.
+
+2. What is the difference between OSI and TCP/IP?
+
+OSI has seven layers, while TCP/IP commonly has four layers: Application, Transport, Internet and Network Access. TCP/IP is used for real-world internet communication, while OSI is a reference model.
+
+3,Explain TCP three-way handshake and connection termination.
+
+TCP three-way handshake is the process of establishing a reliable connection between a client and a server before data transmission begins.
+
+1. SYN: The client sends a SYN packet to request a connection.
+2. SYN-ACK: The server acknowledges the request and sends a SYN-ACK packet.
+3. ACK: The client sends an ACK packet to confirm the connection.
+
+After these three steps, the TCP connection is established.
+
+TCP Connection Termination
+
+TCP normally uses a four-way handshake to close a connection.
+
+1. FIN: The client indicates that it has finished sending data.
+2. ACK: The server acknowledges the FIN.
+3. FIN: The server indicates that it has finished sending data.
+4. ACK: The client acknowledges the FIN, and the connection closes.
+
+
+4. What happens from the moment a user enters a URL in a browser until the webpage loads?
+
+The browser checks its cache, uses DNS to find the server IP address, establishes a connection, performs a TLS handshake for HTTPS, sends an HTTP request and receives the webpage.
+
+What is the difference between MAC, IPv4 and IPv6?
+
+MAC address: Usually 48 bits; used for local network communication.
+
+IPv4: 32-bit logical address, such as 192.168.1.10 .
+
+IPv6: 128-bit logical address, such as 2001:db8::1 .
+
+6. What is the difference between TCP and UDP?
+
+TCP is connection-oriented and provides reliable, ordered data delivery. UDP has lower
+overhead and does not guarantee delivery. TCP is used by HTTPS and SSH; UDP is commonly
+used for DNS queries, voice calls and online gaming.
+
+ What is ARP? What is ARP spoofing?
+
+ARP maps an IPv4 address to a MAC address on a local network. ARP spoofing occurs when an
+attacker sends false ARP messages to redirect network traffic.
+
+8. What are unicast, multicast and broadcast?
+
+Unicast – One sender to one receiver.
+Multicast – One sender to a selected group.
+Broadcast – One sender to all devices in the local broadcast domain.
+
+9. Define bandwidth, throughput, latency, jitter and packet loss.
+
+Bandwidth – Maximum capacity of a network connection.
+Throughput – Actual data transfer rate.
+Latency – Time taken for data to travel.
+Jitter – Variation in packet delay.
+Packet loss – Packets that fail to reach their destination
+
+What are MTU and fragmentation? What symptoms can an MTU problem cause
+
+MTU (Maximum Transmission Unit) is the maximum size of a packet that can be transmitted over a network link without fragmentation. The default MTU for standard Ethernet is usually 1500 bytes.
+
+Fragmentation is the process of dividing an IP packet into smaller fragments so that it can pass through a network link with a smaller MTU. In IPv4, fragmentation may occur when required and permitted. In IPv6, routers do not fragment packets; the sending device must adjust packet size.
+
+Symptoms of MTU problems:
+1. Some websites may not load properly.
+2. Downloads or file transfers may fail or get stuck.
+3. VPN connections may experience connectivity issues.
+4. Large packets may be dropped.
+5. Network applications may work intermittently or respond slowly.
+
+Differentiate collision domains and broadcast domains.
+
+A collision domain is a network segment where data packet collisions can occur when devices transmit simultaneously. A switch separates collision domains, typically creating one per port.
+
+A broadcast domain is a network segment where a broadcast message can reach all devices. Routers separate broadcast domains, and VLANs create separate broadcast domains.
+
+12. What is full-duplex and half-duplex?
+
+Full-duplex allows sending and receiving data simultaneously. Half-duplex allows
+communication in only one direction at a time.
+
+13. What are encapsulation and decapsulation?
+
+Encapsulation adds protocol headers as data moves down the network layers. Decapsulation
+removes those headers at the receiving device
+
+14. Explain DNS, DHCP, NAT and default gateway.
+
+DNS converts domain names into IP addresses.
+DHCP automatically assigns IP configuration.
+NAT translates IP addresses.
+Default gateway forwards traffic to other networks.
+
+15. What are the port number ranges?
+
+Well-known ports: 0–1023.
+Registered ports: 1024–49151.
+Dynamic/private or ephemeral ports: 49152–65535
+
